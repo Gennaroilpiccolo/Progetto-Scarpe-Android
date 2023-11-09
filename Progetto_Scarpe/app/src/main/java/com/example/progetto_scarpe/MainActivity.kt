@@ -31,6 +31,15 @@ class MainActivity : AppCompatActivity() {
                     // Esegui l'azione desiderata
                     true
                 }
+                R.id.Home -> {
+                    supportFragmentManager.beginTransaction().apply {
+                        replace(R.id.fragmentContainer,home_page())
+                        commit()
+                    }
+                    // Gestisci il clic sul pulsante 2 (Item 2)
+                    // Esegui l'azione desiderata
+                    true
+                }
                 // Aggiungi ulteriori casi per altri pulsanti, se necessario
                 else -> false
             }
